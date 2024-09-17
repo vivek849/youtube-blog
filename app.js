@@ -10,9 +10,9 @@ const { CheckForAuthenticationCookie } = require('./middlewares/authentication')
 const Blog = require('./models/blog')
 const PORT = process.env.PORT || 3000
 
-mongoose.connect(process.env.MONGO_URL).then((e)=>console.log("MongoDB Connected"));
+mongoose.connect(process.env.MONGO_URL,{ useNewUrlParser: true, useUnifiedTopology: true }).then((e)=>console.log("MongoDB Connected"));
 
-app.set('view engine','ejs')
+app.set('view engine','ejs') 
 app.set('views',path.resolve("./views"))
 app.use(express.urlencoded({extended:false}))
 app.use(cookieParser())
