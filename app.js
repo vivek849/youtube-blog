@@ -9,8 +9,9 @@ const cookieParser = require('cookie-parser')
 const { CheckForAuthenticationCookie } = require('./middlewares/authentication')
 const Blog = require('./models/blog')
 const PORT = process.env.PORT || 3000
+MONGO_URL = 'mongodb+srv://admin:admin@cluster0.fgp03zd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
-mongoose.connect(process.env.MONGO_URL).then((e)=>console.log("MongoDB Connected"));
+mongoose.connect(MONGO_URL).then((e)=>console.log("MongoDB Connected"));
 
 app.set('view engine','ejs')
 app.set('views',path.resolve("./views"))
