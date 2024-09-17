@@ -11,7 +11,7 @@ const Blog = require('./models/blog')
 const PORT = process.env.PORT || 3000
 MONGO_URL = 'mongodb+srv://admin:admin@cluster0.fgp03zd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
-mongoose.connect(MONGO_URL).then((e)=>console.log("MongoDB Connected"));
+mongoose.connect(MONGO_URL).then((e)=>console.log("MongoDB Connected")).catch(err => console.error('MongoDB connection error:', err));
 
 app.set('view engine','ejs')
 app.set('views',path.resolve("./views"))
