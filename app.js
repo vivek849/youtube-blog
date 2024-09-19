@@ -10,7 +10,6 @@ const { CheckForAuthenticationCookie } = require('./middlewares/authentication')
 const Blog = require('./models/blog')
 const PORT = process.env.PORT || 3000
 
-<<<<<<< HEAD
 mongoose.connect(process.env.MONGO_URL,{ useNewUrlParser: true, useUnifiedTopology: true }).then((e)=>console.log("MongoDB Connected"));
 
 app.set('view engine','ejs') 
