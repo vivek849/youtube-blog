@@ -8,7 +8,7 @@ const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
 const { CheckForAuthenticationCookie } = require('./middlewares/authentication')
 const Blog = require('./models/blog')
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000 
 
 mongoose.connect(process.env.MONGO_URL,{ useNewUrlParser: true, useUnifiedTopology: true }).then((e)=>console.log("MongoDB Connected"));
 
