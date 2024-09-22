@@ -23,7 +23,7 @@ app.get('/',async(req,res)=>{
     const allBlogs = await (await Blog.find({}))
     res.render("home",{
         user: req.user,
-        blogs: allBlogs
+        blogs: allBlogs,
     }) 
 })
 app.use('/user', userRoutes)
